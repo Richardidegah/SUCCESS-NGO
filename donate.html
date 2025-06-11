@@ -47,12 +47,11 @@
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="md:hidden hidden bg-teal-800 px-4 py-4 space-y-3">
-      <a href="#Home" class="block py-2 hover:text-teal-200">Home</a>
-      <a href=".Aboutl" class="block py-2 hover:text-teal-200">About</a>
+      <a href="./index.html" class="block py-2 hover:text-teal-200">Home</a>
+      <a href="./about.html" class="block py-2 hover:text-teal-200">About</a>
       <!-- <a href="#Programs" class="block py-2 hover:text-teal-200">Programs</a> -->
-      <a href="#Gallery" class="block py-2 hover:text-teal-200">Gallery</a>
+      <a href="./gallery.html" class="block py-2 hover:text-teal-200">Gallery</a>
       <a href="./Contact.html" class="block py-2 hover:text-teal-200">Contact</a>
-      <a href="#" class="block text-center bg-teal-600 hover:bg-teal-500 py-2 rounded-lg">Donate Now</a>
     </div>
   </nav>
 
@@ -333,12 +332,11 @@
                         <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                    <p class="text-gray-400">Tax ID: 45-1234567</p>
                     <p class="text-gray-400">Registered 501(c)(3) nonprofit</p>
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2023 Hope for Women & Children Foundation. All rights reserved.</p>
+                <p>&copy; 2023 Prestigous Act of Charity Aid Initiative. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -374,6 +372,14 @@
     </div>
 
     <script>
+// mobileMenu
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
         document.addEventListener('DOMContentLoaded', function() {
     // DOM Elements
     const oneTimeBtn = document.getElementById('oneTimeBtn');
