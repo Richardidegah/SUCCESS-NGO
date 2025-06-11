@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareForAll - About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#FF6B6B',
+                        secondary: '#4ECDC4',
+                        dark: '#292F36',
+                        light: '#F7FFF7',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+        }
+    </style>
+</head>
+<body class="font-poppins bg-light text-dark">
+    <!-- Navigation -->
+      <nav class="bg-teal-700 text-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-hands-helping text-2xl"></i>
+        <a href="#" class="text-xl font-bold">Prestigous act of charity Aid Initiative</a>
+      </div>
+
+      <!-- Hamburger Button -->
+      <button id="menuToggle" aria-label="Toggle Menu" class="md:hidden text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-teal-200 font-medium">Home</a>
+        <!-- <a href="#Programs" class="hover:text-teal-200 font-medium">Programs</a> -->
+        <a href="./gallery.html" class="hover:text-teal-200 font-medium">Gallery</a>
+        <a href="./Contact.html" class="hover:text-teal-200 font-medium">Contact</a>
+        <a href="./get involved/donate.html" class="hover:text-teal-200 font-medium">Donate</a>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-teal-800 px-4 py-4 space-y-3">
+      <a href="./index.html" class="block py-2 hover:text-teal-200">Home</a>
+      <!-- <a href="./Programs.html" class="block py-2 hover:text-teal-200">Programs</a> -->
+      <a href="./gallery.html" class="block py-2 hover:text-teal-200">Gallery</a>
+      <a href="./Contact.html" class="block py-2 hover:text-teal-200">Contact</a>
+      <a href="./Donate.html" class="block py-2 hover:text-teal-200">Donate</a>
+      <a href="./get involved/donate.html" class="block text-center bg-teal-600 hover:bg-teal-500 py-2 rounded-lg">Donate Now</a>
+    </div>
+  </nav>
+
+
+    <!-- Hero Section -->
+    <header class="relative h-96 flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80')] bg-cover bg-center">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-white text-shadow mb-4">About Our Mission</h1>
+            <p class="text-xl text-white text-shadow max-w-2xl mx-auto">Empowering women and children to build brighter futures through care, education, and support.</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 mt-7 justify-items-center">Our Story</h2>
+                    <p class="mb-4">Founded in 2010, Prestigiousact of charity Aid Initiative began as a small community initiative to support single mothers and their children in our local neighborhood. What started as a food pantry and childcare program has grown into a comprehensive support system serving thousands of women and children annually.</p>
+                    <p class="mb-4">Our founder, Mrs. Success Nmba, recognized the systemic barriers facing vulnerable women and children and dedicated her life to creating sustainable solutions that empower rather than enable.</p>
+                    <p>Today, we operate in 7 communities across the country, with plans to expand our reach even further in the coming years.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="./photos/h1.jpg" 
+                         alt="Our team helping women and children" 
+                         class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission/Vision Section -->
+    <section class="py-16 bg-white px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Our Core Values </h2>
+                <h3 class="text-green-950 font-bold mx-20">Compassion. Empowerment. Protection</h3>
+                <p class="max-w-2xl mx-auto">These principles guide everything we do at Prestigious act of Charity Aid Initative</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-light p-8 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow">
+                    <div class="text-5xl mb-4 text-secondary">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Compassion</h3>
+                    <p>We meet every individual with empathy, understanding, and unconditional positive regard.</p>
+                </div>
+                
+                <div class="bg-light p-8 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow">
+                    <div class="text-5xl mb-4 text-secondary">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Empowerment</h3>
+                    <p>We believe in equipping women and children with the tools they need to thrive independently.</p>
+                </div>
+                
+                <div class="bg-light p-8 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow">
+                    <div class="text-5xl mb-4 text-secondary">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Protection</h3>
+                    <p>We create safe spaces where women and children can grow without fear of violence or discrimination.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="py-16 bg-teal-700 text-white px-4">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h2 class="text-3xl font-bold mb-12">Our Impact</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="p-4">
+                    <div class="text-4xl font-bold mb-2" id="stat1">1,200</div>
+                    <p>Women Supported</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold mb-2" id="stat2">1,500</div>
+                    <p>Children Cared For</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold mb-2" id="stat3">7</div>
+                    <p>Communities Reached</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold mb-2" id="stat4">37</div>
+                    <p>Volunteers Engaged</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Meet Our Leadership</h2>
+                <p class="max-w-2xl mx-auto">Dedicated professionals committed to making a difference</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                         alt="Dr. Sarah Johnson" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Mrs. Success Nmba</h3>
+                        <p class="text-secondary mb-3">Founder & Executive Director</p>
+                        <p class="text-sm">With 12+ years in social work, Mrs. Success Nmba leads with vision and compassion towards the needy and the less privileged in the society.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                         alt="Michael Chen" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Michael Chen</h3>
+                        <p class="text-secondary mb-3">Program Director</p>
+                        <p class="text-sm">Specializes in child development and educational initiatives.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" 
+                         alt="Aisha Mohammed" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Aisha Mohammed</h3>
+                        <p class="text-secondary mb-3">Community Outreach</p>
+                        <p class="text-sm">Connects with local communities to identify needs.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                         alt="David Rodriguez" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">David Rodriguez</h3>
+                        <p class="text-secondary mb-3">Finance Director</p>
+                        <p class="text-sm">Ensures resources are allocated effectively to maximize impact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-secondary text-white px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl font-bold mb-6">Join Us in Making a Difference</h2>
+            <p class="mb-8 text-xl">Whether through volunteering, donations, or spreading awareness, your support changes lives.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#" class="bg-teal-700 hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition">Donate Now</a>
+                <a href="#" class="bg-white hover:bg-gray-100 text-secondary font-bold py-3 px-8 rounded-full transition">Volunteer</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Prestigious ast of charity Aid Initiative</h3>
+                    <p class="text-gray-400">Dedicated to empowering underprivileged women and children through education, healthcare, and economic opportunities.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="./index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="./about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Our Programs</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-white">gallery</a></li>
+                        <li><a href="./Contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> 36, 6922 road, Gwarimpa, Abuja</li>
+                        <li class="flex items-center"><i class="fas fa-phone mr-2"></i>+(234) 8122941097</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i>richardidegah7@gmail.com</li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter to stay updated on our work.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-3 py-2 bg-gray-700 text-white rounded-l focus:outline-none w-full">
+                        <button type="submit" class="bg-teal-600 hover:bg-teal-500 px-4 py-2 rounded-r">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 Prestigous act of charity aid initiative. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/idegah.richard" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/idegah_richard?t=LWljgCRWj7pV4ylWvsTPdA&s=09" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="I'm on Instagram as @richardidegah2024. Install the app to follow my photos and videos. https://www.instagram.com/richardidegah2024?igsh=MWxlb294ZW1sOXpnYg==" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a href="http://"></a>
+            </div>
+        </div>
+    </footer>
+
+      <!-- Mobile Menu Script -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

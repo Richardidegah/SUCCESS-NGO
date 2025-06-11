@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | Hope for Women & Children Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="donation.js" defer></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4f46e5', // indigo-600
+                        secondary: '#7c3aed', // violet-600
+                        accent: '#10b981', // emerald-500
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+  <nav class="bg-teal-600 text-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-hands-helping text-2xl"></i>
+        <a href="#" class="text-xl font-bold">Prestigous act of charity Aid Initiative</a>
+      </div>
+
+      <!-- Hamburger Button -->
+      <button id="menuToggle" aria-label="Toggle Menu" class="md:hidden text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-6">
+        <a href="./index.html" class="hover:text-teal-200 font-medium">Home</a>
+        <a href="./about.html" class="hover:text-teal-200 font-medium">About</a>
+        <!-- <a href="#Programs" class="hover:text-teal-200 font-medium">Programs</a> -->
+        <a href="gallery.html" class="hover:text-teal-200 font-medium">Gallery</a>
+        <a href="./Contact.html" class="hover:text-teal-200 font-medium">Contact</a>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-teal-800 px-4 py-4 space-y-3">
+      <a href="#Home" class="block py-2 hover:text-teal-200">Home</a>
+      <a href=".Aboutl" class="block py-2 hover:text-teal-200">About</a>
+      <!-- <a href="#Programs" class="block py-2 hover:text-teal-200">Programs</a> -->
+      <a href="#Gallery" class="block py-2 hover:text-teal-200">Gallery</a>
+      <a href="./Contact.html" class="block py-2 hover:text-teal-200">Contact</a>
+      <a href="#" class="block text-center bg-teal-600 hover:bg-teal-500 py-2 rounded-lg">Donate Now</a>
+    </div>
+  </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-teal-700 from-primary to-secondary text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4">Your Donation Changes Lives</h2>
+            <p class="text-xl max-w-2xl mx-auto">Every contribution helps provide shelter, education, and healthcare to women and children in need.</p>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 rounded-lg bg-gray-50">
+                    <div class="text-4xl font-bold text-teal-700 mb-2">1,200+</div>
+                    <div class="text-gray-600">Women Empowered</div>
+                </div>
+                <div class="p-6 rounded-lg bg-gray-50">
+                    <div class="text-4xl font-bold text-teal-700 mb-2">1,500+</div>
+                    <div class="text-gray-600">Children Supported</div>
+                </div>
+                <div class="p-6 rounded-lg bg-gray-50">
+                    <div class="text-4xl font-bold text-teal-700 mb-2">27+</div>
+                    <div class="text-gray-600">Communities Reached</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Form Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto">
+                <!-- Donation Options -->
+                <div class="lg:w-2/3 bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-teal-700 mb-6">Make a Donation</h3>
+                    
+                    <!-- Donation Type Toggle -->
+                    <div class="mb-8">
+                        <div class="flex border border-gray-300 rounded-lg overflow-hidden mb-4">
+                            <button id="oneTimeBtn" class="donation-type-btn flex-1 py-3 px-4 font-medium  bg-teal-700 text-white">
+                                One-Time Donation
+                            </button>
+                            <button id="monthlyBtn" class="donation-type-btn flex-1 py-3 px-4 font-medium text-gray-700">
+                                Monthly Donation
+                            </button>
+                        </div>
+                        <p id="donationTypeDesc" class="text-gray-600 text-sm">
+                            Your one-time gift will provide immediate support to women and children in crisis.
+                        </p>
+                    </div>
+                    
+                    <!-- Amount Selection -->
+                    <div class="mb-8">
+                        <h4 class="font-semibold text-gray-800 mb-4">Select Donation Amount</h4>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-4">
+                            <button class="amount-option py-3 px-4 border border-gray-300 rounded-lg hover:border-primary hover:bg-primary hover:text-white font-medium" data-amount="25">$25</button>
+                            <button class="amount-option py-3 px-4 border border-gray-300 rounded-lg hover:border-primary hover:bg-primary hover:text-white font-medium" data-amount="50">$50</button>
+                            <button class="amount-option py-3 px-4 border border-gray-300 rounded-lg hover:border-primary hover:bg-primary hover:text-white font-medium" data-amount="100">$100</button>
+                            <button class="amount-option py-3 px-4 border border-gray-300 rounded-lg hover:border-primary hover:bg-primary hover:text-white font-medium" data-amount="250">$250</button>
+                            <button class="amount-option py-3 px-4 border border-gray-300 rounded-lg hover:border-primary hover:bg-primary hover:text-white font-medium" data-amount="500">$500</button>
+                            <button class="amount-option py-3 px-4 border border-gray-300 rounded-lg hover:border-primary hover:bg-primary hover:text-white font-medium" id="customAmountBtn">Other</button>
+                        </div>
+                        <div id="customAmountContainer" class="hidden">
+                            <label for="customAmount" class="block text-gray-700 mb-2">Enter Custom Amount</label>
+                            <div class="relative">
+                                <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">$</span>
+                                <input type="number" id="customAmount" class="w-full pl-8 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Designation Options -->
+                    <div class="mb-8">
+                        <h4 class="font-semibold text-gray-800 mb-4">Where is it needed most?</h4>
+                        <select id="donationDesignation" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            <option value="general">Where most needed</option>
+                            <option value="shelter">Women's Shelter Program</option>
+                            <option value="education">Children's Education Fund</option>
+                            <option value="healthcare">Healthcare Access Initiative</option>
+                            <option value="nutrition">Nutrition Program</option>
+                            <option value="vocational">Vocational Training</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Dedication Option -->
+                    <div class="mb-8">
+                        <div class="flex items-center mb-2">
+                            <input type="checkbox" id="makeDedication" class="mr-2">
+                            <label for="makeDedication" class="text-gray-700">Make this donation in honor or memory of someone</label>
+                        </div>
+                        <div id="dedicationFields" class="hidden mt-4 space-y-4">
+                            <div>
+                                <label for="dedicationType" class="block text-gray-700 mb-2">This is a</label>
+                                <select id="dedicationType" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <option value="honor">Honor Donation</option>
+                                    <option value="memory">Memorial Donation</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="honoreeName" class="block text-gray-700 mb-2">Recipient's Name</label>
+                                <input type="text" id="honoreeName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            <div>
+                                <label for="notificationEmail" class="block text-gray-700 mb-2">Notification Email (optional)</label>
+                                <input type="email" id="notificationEmail" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Email to send acknowledgment to">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Payment Section -->
+                    <div>
+                        <h3 class="text-xl font-bold  text-teal-700">Payment Information</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label for="cardName" class="block text-gray-700 mb-2">Name on Card</label>
+                                <input type="text" id="cardName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            <div>
+                                <label for="cardNumber" class="block text-gray-700 mb-2">Card Number</label>
+                                <input type="text" id="cardNumber" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="1234 5678 9012 3456">
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label for="expiryDate" class="block text-gray-700 mb-2">Expiry Date</label>
+                                    <input type="text" id="expiryDate" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="MM/YY">
+                                </div>
+                                <div>
+                                    <label for="cvv" class="block text-gray-700 mb-2">CVV</label>
+                                    <input type="text" id="cvv" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="123">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Donation Summary -->
+                <div class="lg:w-1/3">
+                    <div class="bg-white p-6 rounded-lg shadow-lg sticky top-4">
+                        <h3 class="text-xl font-bold  text-teal-700 mb-4">Donation Summary</h3>
+                        <div class="space-y-4 mb-6">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Donation Type:</span>
+                                <span id="summaryType" class="font-medium">One-Time</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Amount:</span>
+                                <span id="summaryAmount" class="font-medium">$0.00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Designation:</span>
+                                <span id="summaryDesignation" class="font-medium text-right">Where most needed</span>
+                            </div>
+                            <div id="summaryDedication" class="hidden">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Dedication:</span>
+                                    <span id="summaryDedicationText" class="font-medium text-right"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-t border-gray-200 pt-4 mb-6">
+                            <div class="flex justify-between font-semibold text-lg">
+                                <span>Total:</span>
+                                <span id="summaryTotal">$0.00</span>
+                            </div>
+                        </div>
+                        <button id="submitDonation" class="w-full  bg-teal-700 hover:bg-emerald-600 text-white py-3 px-4 rounded-lg font-semibold transition duration-300">
+                            Complete Donation
+                        </button>
+                        <p class="text-gray-500 text-xs mt-4">
+                            Your donation is secure and tax-deductible. Hope for Women & Children Foundation is a 501(c)(3) organization.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stories -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h3 class="text-2xl font-bold  text-teal-700 mb-2 text-center">Your Donation Makes a Difference</h3>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Here's how contributions like yours have transformed lives in our community</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="bg-primary bg-opacity-10  text-teal-700 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-home text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Safe Shelter</h4>
+                    <p class="text-gray-600">"Because of donors, my children and I have a safe place to live after escaping domestic violence." - Maria, 32</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="bg-primary bg-opacity-10  text-teal-700 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Education</h4>
+                    <p class="text-gray-600">"I'm the first in my family to go to school, thanks to the education sponsorship program." - Jamal, 10</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="bg-primary bg-opacity-10  text-teal-700 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-briefcase-medical text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Healthcare</h4>
+                    <p class="text-gray-600">"The mobile clinic saved my baby's life when she had a high fever in the middle of the night." - Aisha, 28</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Ways to Help -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h3 class="text-2xl font-bold  text-teal-700 mb-12 text-center">Other Ways to Support</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="text-center p-6">
+                    <div class="bg-primary bg-opacity-10  text-teal-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hand-holding-heart text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Sponsor a Child</h4>
+                    <p class="text-gray-600">Provide ongoing support for a child's education, nutrition, and healthcare.</p>
+                    <a href="#" class="inline-block mt-4  text-teal-700 font-medium hover:underline">Learn More</a>
+                </div>
+                <div class="text-center p-6">
+                    <div class="bg-primary bg-opacity-10  text-teal-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hands-helping text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Volunteer</h4>
+                    <p class="text-gray-600">Give your time and skills to directly impact women and children in need.</p>
+                    <a href="#" class="inline-block mt-4  text-teal-700 font-medium hover:underline">Opportunities</a>
+                </div>
+                <div class="text-center p-6">
+                    <div class="bg-primary bg-opacity-10  text-teal-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-gift text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">In-Kind Donations</h4>
+                    <p class="text-gray-600">Donate goods like clothing, school supplies, or non-perishable food items.</p>
+                    <a href="#" class="inline-block mt-4  text-teal-700 font-medium hover:underline">Needed Items</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Prestigous Act of Charity Aid Initiative</h4>
+                    <p class="text-gray-400">Providing support, shelter, and opportunities for women and children in need since 2005.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Our Programs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Success Stories</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Get Involved</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Volunteer</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Donate</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Sponsor a Child</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Corporate Partnerships</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p class="text-gray-400">Tax ID: 45-1234567</p>
+                    <p class="text-gray-400">Registered 501(c)(3) nonprofit</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Hope for Women & Children Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Donation Confirmation Modal -->
+    <div id="donationModal" class="fixed inset-0 bg-black bg-opacity-50-flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+            <div class="text-center mb-6">
+                <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-check text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Thank You!</h3>
+                <p class="text-gray-600">Your donation has been received. A confirmation email has been sent to your inbox.</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                <div class="flex justify-between mb-2">
+                    <span class="text-gray-600">Amount:</span>
+                    <span id="modalAmount" class="font-medium">$100.00</span>
+                </div>
+                <div class="flex justify-between mb-2">
+                    <span class="text-gray-600">Type:</span>
+                    <span id="modalType" class="font-medium">One-Time Donation</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-600">Designation:</span>
+                    <span id="modalDesignation" class="font-medium">Children's Education Fund</span>
+                </div>
+            </div>
+            <button id="closeModal" class="w-full bg-primary hover:bg-indigo-700 text-white py-2 px-4 rounded-lg font-medium">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // DOM Elements
+    const oneTimeBtn = document.getElementById('oneTimeBtn');
+    const monthlyBtn = document.getElementById('monthlyBtn');
+    const donationTypeDesc = document.getElementById('donationTypeDesc');
+    const amountOptions = document.querySelectorAll('.amount-option');
+    const customAmountBtn = document.getElementById('customAmountBtn');
+    const customAmountContainer = document.getElementById('customAmountContainer');
+    const customAmountInput = document.getElementById('customAmount');
+    const makeDedication = document.getElementById('makeDedication');
+    const dedicationFields = document.getElementById('dedicationFields');
+    const donationDesignation = document.getElementById('donationDesignation');
+    const summaryType = document.getElementById('summaryType');
+    const summaryAmount = document.getElementById('summaryAmount');
+    const summaryDesignation = document.getElementById('summaryDesignation');
+    const summaryDedication = document.getElementById('summaryDedication');
+    const summaryDedicationText = document.getElementById('summaryDedicationText');
+    const summaryTotal = document.getElementById('summaryTotal');
+    const submitDonation = document.getElementById('submitDonation');
+    const donationModal = document.getElementById('donationModal');
+    const closeModal = document.getElementById('closeModal');
+    const modalAmount = document.getElementById('modalAmount');
+    const modalType = document.getElementById('modalType');
+    const modalDesignation = document.getElementById('modalDesignation');
+
+    // Current donation data
+    let donationData = {
+        type: 'one-time',
+        amount: 0,
+        designation: 'general',
+        dedication: null
+    };
+
+    // Set up event listeners
+    oneTimeBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        setDonationType('one-time');
+    });
+
+    monthlyBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        setDonationType('monthly');
+    });
+
+    amountOptions.forEach(option => {
+        option.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all buttons
+            amountOptions.forEach(btn => {
+                btn.classList.remove('bg-primary', 'text-white', 'border-primary');
+                btn.classList.add('border-gray-300');
+            });
+            
+            // Add active class to clicked button
+            if (this.id !== 'customAmountBtn') {
+                this.classList.add('bg-primary', 'text-white', 'border-primary');
+                this.classList.remove('border-gray-300');
+                customAmountContainer.classList.add('hidden');
+                
+                // Set amount
+                donationData.amount = parseFloat(this.dataset.amount);
+                updateSummary();
+            } else {
+                customAmountContainer.classList.remove('hidden');
+                customAmountInput.focus();
+            }
+        });
+    });
+
+    customAmountInput.addEventListener('input', function() {
+        donationData.amount = parseFloat(this.value) || 0;
+        updateSummary();
+    });
+
+    makeDedication.addEventListener('change', function() {
+        if (this.checked) {
+            dedicationFields.classList.remove('hidden');
+        } else {
+            dedicationFields.classList.add('hidden');
+            donationData.dedication = null;
+        }
+        updateSummary();
+    });
+
+    // Dedication fields change handlers would go here in a full implementation
+    donationDesignation.addEventListener('change', function() {
+        donationData.designation = this.value;
+        updateSummary();
+    });
+
+    submitDonation.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Validate form
+        if (donationData.amount <= 0) {
+            alert('Please select or enter a donation amount');
+            return;
+        }
+        
+        // In a real implementation, you would process the payment here
+        // For this demo, we'll just show the confirmation modal
+        
+        // Update modal with donation details
+        modalAmount.textContent = `$${donationData.amount.toFixed(2)}`;
+        modalType.textContent = donationData.type === 'one-time' ? 'One-Time Donation' : 'Monthly Donation';
+        
+        // Get designation text
+        const designationText = {
+            'general': 'Where most needed',
+            'shelter': 'Women\'s Shelter Program',
+            'education': 'Children\'s Education Fund',
+            'healthcare': 'Healthcare Access Initiative',
+            'nutrition': 'Nutrition Program',
+            'vocational': 'Vocational Training'
+        }[donationData.designation];
+        
+        modalDesignation.textContent = designationText;
+        
+        // Show modal
+        donationModal.classList.remove('hidden');
+    });
+
+    closeModal.addEventListener('click', function() {
+        donationModal.classList.add('hidden');
+    });
+
+    // Functions
+    function setDonationType(type) {
+        donationData.type = type;
+        
+        if (type === 'one-time') {
+            oneTimeBtn.classList.add('bg-primary', 'text-white');
+            oneTimeBtn.classList.remove('text-gray-700');
+            monthlyBtn.classList.remove('bg-primary', 'text-white');
+            monthlyBtn.classList.add('text-gray-700');
+            donationTypeDesc.textContent = 'Your one-time gift will provide immediate support to women and children in crisis.';
+        } else {
+            monthlyBtn.classList.add('bg-primary', 'text-white');
+            monthlyBtn.classList.remove('text-gray-700');
+            oneTimeBtn.classList.remove('bg-primary', 'text-white');
+            oneTimeBtn.classList.add('text-gray-700');
+            donationTypeDesc.textContent = 'Your monthly support provides sustainable funding for our ongoing programs.';
+        }
+        
+        updateSummary();
+    }
+
+    function updateSummary() {
+        // Update type
+        summaryType.textContent = donationData.type === 'one-time' ? 'One-Time' : 'Monthly';
+        
+        // Update amount
+        summaryAmount.textContent = `$${donationData.amount.toFixed(2)}`;
+        summaryTotal.textContent = `$${donationData.amount.toFixed(2)}`;
+        
+        // Update designation
+        const designationText = {
+            'general': 'Where most needed',
+            'shelter': 'Women\'s Shelter Program',
+            'education': 'Children\'s Education Fund',
+            'healthcare': 'Healthcare Access Initiative',
+            'nutrition': 'Nutrition Program',
+            'vocational': 'Vocational Training'
+        }[donationData.designation];
+        summaryDesignation.textContent = designationText;
+        
+        // Update dedication if exists
+        if (donationData.dedication) {
+            summaryDedication.classList.remove('hidden');
+            summaryDedicationText.textContent = `${donationData.dedication.type === 'honor' ? 'In honor of' : 'In memory of'} ${donationData.dedication.name}`;
+        } else {
+            summaryDedication.classList.add('hidden');
+        }
+    }
+
+    // Initialize
+    setDonationType('one-time');
+    amountOptions[2].click(); // Select $100 by default
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Hope for Women & Children Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+  <nav class="bg-teal-700 text-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-hands-helping text-2xl"></i>
+        <a href="#" class="text-xl font-bold">Prestigous act of charity Aid Initiative</a>
+      </div>
+
+      <!-- Hamburger Button -->
+      <button id="menuToggle" aria-label="Toggle Menu" class="md:hidden text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-6">
+        <a href="./index.html" class="hover:text-teal-200 font-medium">Home</a>
+        <a href="./about.html" class="hover:text-teal-200 font-medium">About</a>
+        <!-- <a href="#Programs" class="hover:text-teal-200 font-medium">Programs</a> -->
+        <a href="gallery.html" class="hover:text-teal-200 font-medium">Gallery</a>
+        <a href="./get involved/donate.html" class="hover:text-teal-200 font-medium">Donate</a>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-teal-800 px-4 py-4 space-y-3">
+      <a href="./index.html" class="block py-2 hover:text-teal-200">Home</a>
+      <a href="./about.html" class="block py-2 hover:text-teal-200">About</a>
+      <!-- <a href="./Programs.html" class="block py-2 hover:text-teal-200">Programs</a> -->
+      <a href="./gallery.html" class="block py-2 hover:text-teal-200">Gallery</a>
+      <a href="./Donate.html" class="block py-2 hover:text-teal-200">Donate</a>
+      <a href="./get involved/donate.html" class="block text-center bg-teal-600 hover:bg-teal-500 py-2 rounded-lg">Donate</a>
+    </div>
+  </nav>
+    <!-- Hero Section -->
+    <section class="bg-teal-600 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+            <p class="text-xl max-w-2xl mx-auto">We're here to help women and children in need. Reach out to us for support, partnerships, or to learn how you can help.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- Contact Form -->
+                <div class="md:w-1/2 bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-teal-800 mb-6">Send Us a Message</h3>
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                            <select id="subject" name="subject" 
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                <option value="">Select a subject</option>
+                                <option value="support">Request for Support</option>
+                                <option value="volunteer">Volunteer Opportunity</option>
+                                <option value="donation">Donation Inquiry</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                      class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="bg-teal-700 hover:bg-teal-950 text-white px-6 py-3 rounded-lg font-semibold transition duration-300 w-full">
+                            Send Message
+                        </button>
+                    </form>
+                    <div id="formSuccess" class="hidden mt-4 p-4 bg-green-100 text-green-700 rounded-lg">
+                        Thank you for your message! We'll get back to you soon.
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="md:w-1/2 space-y-8">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-teal-800 mb-6">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-map-marker-alt text-teal-600 text-xl mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Our Address</h4>
+                                    <p class="text-gray-600">number 36, 6922 road, opposite lake-land school, Gwarimpa, Abuja</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-phone-alt text-teal-600 text-xl mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Phone Numbers</h4>
+                                    <p class="text-gray-600">Main: +(234) 812-2941097</p>
+                                    <p class="text-gray-600">Support Line: (123) 456-7891 (24/7)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-envelope text-teal-600 text-xl mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Email Addresses</h4>
+                                    <p class="text-gray-600">General: info@hopeforwomenchildren.org</p>
+                                    <p class="text-gray-600">Support: support@hopeforwomenchildren.org</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-clock text-teal-600 text-xl mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Office Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 9:00 AM - 5:00 PM</p>
+                                    <p class="text-gray-600">Weekends: Closed (Support line available)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Emergency Section -->
+                    <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg">
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-exclamation-triangle text-red-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-red-800">Emergency Support</h4>
+                                <p class="text-red-700 mt-2">If you or someone you know is in immediate danger or needs urgent assistance, please call our 24/7 support line:</p>
+                                <p class="text-red-800 font-bold text-xl mt-2">+(234) 812-2941097</p>
+                                <p class="text-red-700 mt-2">Or contact local emergency services.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="bg-gray-100 py-8">
+        <div class="container mx-auto px-4">
+            <h3 class="text-2xl font-bold text-teal-800 mb-6 text-center">Our Location</h3>
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <!-- Placeholder for map - in a real implementation you would use Google Maps or similar -->
+                <div class="h-96 bg-gray-200 flex items-center justify-center rounded-lg">
+                    <div class="text-center">
+                        <i class="fas fa-map-marked-alt text-4xl text-teal-600 mb-4"></i>
+                        <p class="text-gray-700">Map would be displayed here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real implementation, you would send the form data to a server here
+            // For demonstration, we'll just show the success message
+            
+            // Get form values
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Log to console (in a real app, you would send to your backend)
+            console.log('Form submitted:', formData);
+            
+            // Show success message
+            formSuccess.classList.remove('hidden');
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                formSuccess.classList.add('hidden');
+            }, 5000);
+        });
+    }
+    
+    // Mobile menu toggle functionality would go here
+    // For simplicity, we're not implementing it in this example
+});
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Prestigous Act of Charity Aid Initiative</h4>
+                    <p class="text-gray-400">Providing support, shelter, and opportunities for women and children in need since 2010.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="./about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="./Programs.html" class="text-gray-400 hover:text-white">Our Programs</a></li>
+                        <li><a href="./gallery.html" class="text-gray-400 hover:text-white">Gallery</a></li>
+                        <li><a href="Contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Get Involved</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./get involved/volunteer.html" class="text-gray-400 hover:text-white">Volunteer</a></li>
+                        <li><a href="./get involved/donate.html" class="text-gray-400 hover:text-white">Donate</a></li>
+                        <li><a href="./get involved/sponsor.html" class="text-gray-400 hover:text-white">Sponsor a Child</a></li>
+                        <li><a href="./get involved/partners.html" class="text-gray-400 hover:text-white">Corporate Partnerships</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="https://www.facebook.com/idegah.richard" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/idegah_richard?t=LWljgCRWj7pV4ylWvsTPdA&s=09" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="I'm on Instagram as @richardidegah2024. Install the app to follow my photos and videos. https://www.instagram.com/richardidegah2024?igsh=MWxlb294ZW1sOXpnYg==" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p class="text-gray-400">Subscribe to our newsletter</p>
+                    <div class="mt-2 flex">
+                        <input type="email" placeholder="Your email" class="px-3 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
+                        <button class="bg-teal-600 hover:bg-teal-700 px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Prestigous act of charity aid initiative. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
